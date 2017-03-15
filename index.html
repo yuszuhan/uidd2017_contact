@@ -3,7 +3,7 @@
 
 <script src="https://use.typekit.net/fmw7edk.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
+ 
 <style>
 div.full{
 float:left;
@@ -64,6 +64,8 @@ height:100%;
 float:right;
 }
 
+u
+
 .slecetbtns{
 font-family:"adobe-song-std";
 font-size:3vh;
@@ -121,14 +123,17 @@ float:left;
 width:140%;
 height:100%;
 }
-#milk{
+#milk
+{
 margin-right:18%;
 margin-top:8%;
 float:right;
 width:35%;
 height:45%;
 }
-#milktext{
+
+#milktext
+{
 font-family:"adobe-song-std";
 text-align:left;
 font-size:2.5vh;
@@ -144,20 +149,21 @@ width:15%;
 height:53%;
 }
 
-.right_word_block{
+.right_word_block
+{
 float:right;
 width:67%;
 height:100%;
 }
 
-#right_word{
+#right_word
+{
 font-family:"adobe-song-std";
 font-size:3.5vh;
 text-align:left;
 margin-top:24%;
 margin-left:-2%;
 }
-
 
 
 
@@ -177,12 +183,42 @@ margin-left:-2%;
 
 
 <div id="btnsite">
-<button class="slecetbtns"><b>HOME</b></button>
-<button class="slecetbtns"><b>ABOUT</b></button>
-<button class="slecetbtns"><b>FINTECH</b></button>
-<button class="slecetbtns"><b>MENU</b></button>
-<button class="slecetbtns"><b>CONTACT</b></button>
+<button class="slecetbtns" onclick = "pushhome" style ="color:black" ><b>HOME<b></button>
+<button class="slecetbtns" onclick = "pushabout" >ABOUT</button>
+<button class="slecetbtns" onclick = "pushfintech" >FINTECH</button>
+<button class="slecetbtns" onclick = "pushmenu" >MENU</button>
+<button class="slecetbtns" id ="choose" onclick = "pushcontact" >CONTACT</button>
 </div>
+
+<script>
+function pushhome()
+{
+location.href = "https://poyushen.github.io/dessertweb/"
+}
+</script>
+
+<script>
+function pushabout()
+{
+location.href = "https://chiaching.github.io/uidd2017_dessert_about/"
+}
+</script>
+
+<script>
+function pushfintech()
+{
+location.href = "https://chiaching.github.io/uidd2017_dessert_fintech/"
+}
+</script>
+
+<script>
+function pushcontact()
+{
+location.href = "https://yuszuhan.github.io/uidd2017_contact/"
+}
+</script>
+
+
 
 </div>
 
