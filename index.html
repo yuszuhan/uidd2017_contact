@@ -9,7 +9,7 @@
 
  <!--網頁放大縮小程式碼開始設定-->
 
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
 
  <script>
@@ -36,18 +36,20 @@
  
 
  
- if((width_after <= (width_before+15)&&(width_after >= (width_before-15)))&& height_after != height_before )
+ if((width_after <= (width_before+20)&&(width_after >= (width_before-20)))&& height_after != height_before )
  {
 	 jq(".full").css("width","100%");
 	 jq(".full").css("height","50vw");
 	 
 	 station_before_now = 1;
 	 
-	
+	jq(".full").prepend("<div>"+1+"</div>");
  }
  else if(width_after != width_before && ((height_after <= (height_before+20))&&(height_after >= (height_before-20))) )
  {
-	 if(station_before_now == 1 || station_before_now == 3)
+	jq(".full").prepend("<div>"+2+"</div>");
+	
+	 if(station_before_now != 2 && station_before_now != 4)
 	 {
 		 if(width_after >= (width_before+5))
 		 {
@@ -98,21 +100,28 @@
 	 }
 		
  }
- else if((width_after >= (width_before+15)||(width_after <= (width_before-15)))&& ((height_after >= (height_before+20))||(height_after <= (height_before-20))))
+ else if((width_after >= (width_before+20)||(width_after <= (width_before-20)))&&((height_after >= (height_before+20))||(height_after <= (height_before-20))))
  {
+	jq(".full").prepend("<div>"+3+"</div>");
+	jq(".full").prepend("<div>"+width_before+"</div>");
+	jq(".full").prepend("<div>"+width_after+"</div>");
+	jq(".full").prepend("<div>"+height_before+"</div>");
+	jq(".full").prepend("<div>"+height_after+"</div>");
+	
+	
+ 
 	 jq(".full").css("width","100%");
 	 jq(".full").css("height","50vw");
 	 
 	 station_before_now = 3;
-	 	
+	 
  }
  else
  {
+	jq(".full").prepend("<div>"+4+"</div>");
 	station_before_now = 1;
-	
-	jq(".full").css("width","100%");
-	jq(".full").css("height","50vw");
-	
+	jq(".full").css("width", width_before_before );
+	 jq(".full").css("height", height_after );	
  }
   
   });
