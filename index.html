@@ -450,11 +450,11 @@ width:100%;
 
 
 <div id="btnsite">
-<button class="slecetbtns" onclick = "pushhome()" >HOME</button>
-<button class="slecetbtns" onclick = "pushabout()" >ABOUT</button>
-<button class="slecetbtns" onclick = "pushfintech()" >FINTECH</button>
-<button class="slecetbtns" onclick = "pushmenu()" >MENU</button>
-<button class="slecetbtns" id ="choose" onclick = "pushcontact()"  style ="color:black" ><b>CONTACT</b></button>
+<button class="slecetbtns" onclick = "pushhome()" onmouseover="turntoblack(this)" onmouseout="turntogray(this)" >HOME</button>
+<button class="slecetbtns" onclick = "pushabout()" onmouseover="turntoblack(this)" onmouseout="turntogray(this)">ABOUT</button>
+<button class="slecetbtns" onclick = "pushfintech()" onmouseover="turntoblack(this)" onmouseout="turntogray(this)">FINTECH</button>
+<button class="slecetbtns" onclick = "pushmenu()" onmouseover="turntoblack(this)" onmouseout="turntogray(this)">MENU</button>
+<button class="slecetbtns" id ="choose" onclick = "pushcontact()"  style ="color:black" onmouseover="turntoblack(this)" ><b>CONTACT</b></button>
 </div>
 
 <script>
@@ -493,6 +493,18 @@ location.href = "https://yuszuhan.github.io/uidd2017_contact/";
 }
 </script>
 
+<script>
+function turntoblack(x)
+{
+	x.style.color="black";
+}
+</script>
+
+<script>
+function turntogray(x){
+	x.style.color="gray";
+}
+</script>
 
 
 </div>
